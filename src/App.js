@@ -23,15 +23,6 @@ function App() {
   console.log(products);
   return (
     <>
-      {/* <div classNameName="bg-white">
-        <div classNameName="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 classNameName="sr-only">Products</h2>
-
-          <div classNameName="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            
-          </div>
-        </div>
-      </div> */}
 
       <div className="container mx-auto p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -64,7 +55,7 @@ function App() {
               ))}
             </>
           ) : (
-            <div>There are no products</div>
+            <div>Loading .....</div>
           )}
         </div>
       </div>
