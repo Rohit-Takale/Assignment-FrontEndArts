@@ -2,7 +2,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function SelectInput({ options, label, onChange,id }) {
+export default function SelectInput({ options, label, onChange,id , value }) {
    const optionList = Array.isArray(options) && options.length > 0 ? 
    ['Choose an option', ...options] :
    ['Choose an option'];
@@ -21,6 +21,7 @@ export default function SelectInput({ options, label, onChange,id }) {
           name="custom-select"
           className="mt-1 block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           onChange={onChange}
+          value={value}
         >
 
 
