@@ -168,7 +168,7 @@ console.log(filteredProducts);
                     <h3 className="text-lg font-semibold">{item.title}</h3>
                     <p className="text-gray-600 mt-2">
                       {item.description.length > 50
-                        ? item.description.substring(0, 100) + "..."
+                        ? item.description.substring(0, 50) + "..."
                         : item.description}
                     </p>
                     <div className="flex justify-between items-center mt-4">
