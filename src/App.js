@@ -10,12 +10,11 @@ function App() {
   const [categories, setCategories] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [error, setError] = useState(false);
-  const [showFilters, setShowFilters] = useState(false)
+  const [showFilters, setShowFilters] = useState(false);
 
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedPriceOrder, setSelectedPriceOrder] = useState("");
   const [selectedRating, setSelectedRating] = useState("");
-  // const [pricelist, setPriceList] = useState(null)
 
   const priceList = ["Low-High", "High-Low"];
   const ratingList = [1, 2, 3, 4, 5];
@@ -46,7 +45,6 @@ function App() {
         }, []);
 
         setCategories(categories_list);
-        // console.log(categories_list);
         setFilteredProducts(response);
         setProducts(response);
         setError(false);
@@ -62,7 +60,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    applyFilters(); // Apply filters whenever filter state changes
+    applyFilters();
   }, [selectedCategory, selectedPriceOrder, selectedRating, products]);
 
   const applyFilters = () => {
@@ -115,8 +113,8 @@ function App() {
   };
   const toggleFilter = (e) => {
     e.preventDefault();
-    setShowFilters(!showFilters)
-  }
+    setShowFilters(!showFilters);
+  };
   console.log(filteredProducts);
 
   return (
@@ -129,9 +127,12 @@ function App() {
         ) : (
           <>
             <div className="my-10">
-              <FilterButton onClick={toggleFilter} title={showFilters ? 'Hide Filters' : 'Show Filters'} />
+              <FilterButton
+                onClick={toggleFilter}
+                title={showFilters ? "Hide Filters" : "Show Filters"}
+              />
             </div>
-            <div className={showFilters ? "block my-10" : 'hidden'}>
+            <div className={showFilters ? "block my-10" : "hidden"}>
               <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
                 <div>
                   <SelectInput

@@ -23,13 +23,6 @@ export default function SelectInput({ options, label, onChange,id , value }) {
           onChange={onChange}
           value={value}
         >
-
-
-          {/* {optionList && options.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))} */}
           {optionList.map((option, index) => (
           <option key={index} value={option === 'Choose an option' ? '' : option}>
             {option}
