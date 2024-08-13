@@ -133,7 +133,7 @@ function App() {
               />
             </div>
             <div className={showFilters ? "block my-10" : "hidden"}>
-              <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
                 <div>
                   <SelectInput
                     id="price_id"
